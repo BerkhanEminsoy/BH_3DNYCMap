@@ -9,6 +9,9 @@
   <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
 
   <!-- START MapBox Supplement Code -->
+  <title>Display a map</title>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
   <!-- END MapBox Supplement Code -->
 
   <!-- BEGIN CSS STYLE -->
@@ -106,20 +109,20 @@
   <!-- END MAIN JAVA DIV -->
 
   <!-- BEGIN MapBox Map -->
-  <div id='map'>
-      <nav id="menu"></nav>
-      <script type="text/javascript">
+  <div id='map' style='width: 400px; height: 300px;'></div>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYnVyb2hhcHBvbGQiLCJhIjoiY2p3cnZyZmMyMDlhMTRhbnc0c2NhNnFlYyJ9.9YAuKw3KbJuWP1Okcgo_Vg';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/burohappold/cjwrw1owv01zs1cpr4do7ntcv'
+      center: [-73.977809, 40.741903],
+      zoom: 12.33
+      bearing: -12.50
+      pitch: 60.00
+    });
+  </script>
 
-          mapboxgl.accessToken = 'pk.eyJ1Ijoic2xlN2VuIiwiYSI6ImNqdHU0ZTM2NTFpazY0M20ya3B1aWRlNGwifQ.CWoYi8qNg9jIIkdbSTQ_Qg';
-          var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/sle7en/cjuo5xbyhb9aj1fn087jfcwi0',
-            center: [-74.024, 41.505],
-            zoom: 13.5
-          });
 
-      </script>
-    </div>
   <!-- END MapBox Map -->
 
 </body>
