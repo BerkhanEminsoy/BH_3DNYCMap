@@ -108,8 +108,13 @@
   </div>
   <!-- END MAIN JAVA DIV -->
 
+  <!-- Load three.js libraries to laod a 3D model into a mapbox style map taken from https://docs.mapbox.com/mapbox-gl-js/example/add-3d-model/ -->
+  <script src='https://unpkg.com/three@0.102.0/build/three.min.js'></script>
+  <script src="https://unpkg.com/three@0.102.0/examples/js/loaders/GLTFLoader.js"></script>
+  <!-- End three.js library load-->
+
   <!-- BEGIN MapBox Map -->
-  <div id='map' style='width: 400px; height: 300px;'></div>
+  <div id='map' style='width: 1600px; height: 900px;'></div>
   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiYnVyb2hhcHBvbGQiLCJhIjoiY2p3cnZyZmMyMDlhMTRhbnc0c2NhNnFlYyJ9.9YAuKw3KbJuWP1Okcgo_Vg';
     var map = new mapboxgl.Map({
