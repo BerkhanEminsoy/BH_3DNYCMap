@@ -26,10 +26,10 @@
          }
 
     #map { position:absolute;
-           top:100px;
+           top:75px;
            bottom:20px;
            border-radius:30px;
-           border: 1px solid rgba(0,0,0,0.5)
+           border: 1px solid rgb(0,0,0)
          }
 
     #menu {
@@ -80,7 +80,10 @@
 </head>
 <body>
 
-  <div id="title">BH NYC Projects Index</strong></div>
+  <div id="title">
+    BH NYC Projects Index
+  </div>
+
   <div id="intro">
     <!--intro left empty to be filled by future paragraph elements-->
   </div>
@@ -88,8 +91,8 @@
   <div>
      <script type="text/javascript">
 
-       //var width = window.innerWidth
-       //var height = window.innerHeight
+       var width = window.innerWidth
+       var height = window.innerHeight
 
        /*
        //Store CSV Data in a variable
@@ -113,7 +116,7 @@
   <!-- End three.js library load-->
 
   <!-- BEGIN MapBox Map -->
-  <div id='map' style='width: 1600px; height: 900px;'></div>
+  <div id='map' style='width: 90%; height: 75%;'></div>
   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiYnVyb2hhcHBvbGQiLCJhIjoiY2p3cnZyZmMyMDlhMTRhbnc0c2NhNnFlYyJ9.9YAuKw3KbJuWP1Okcgo_Vg';
     var map = new mapboxgl.Map({
