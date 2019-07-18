@@ -131,15 +131,16 @@
        */
 
        // parameters to ensure the model is georeferenced correctly on the map
-       /*
-       var modelOrigin = [148.98190, -35.39847];
+       ///*
+       var modelOrigin = [-73.971709, 40.744066];
        var modelAltitude = 0;
        var modelRotate = [Math.PI / 2, 0, 0];
-       var modelScale = 5.41843220338983e-8;
-       */
+       var modelScale = 1;
+       //old model scale 5.41843220338983e-8
+       //*/
 
        // transformation parameters to position, rotate and scale the 3D model onto the map
-       /*
+       ///*
        var modelTransform = {
        translateX: mapboxgl.MercatorCoordinate.fromLngLat(modelOrigin, modelAltitude).x,
        translateY: mapboxgl.MercatorCoordinate.fromLngLat(modelOrigin, modelAltitude).y,
@@ -149,10 +150,10 @@
        rotateZ: modelRotate[2],
        scale: modelScale
        };
-       */
+       //*/
 
        // configuration of the custom layer for a 3D model per the CustomLayerInterface
-       /*
+       ///*
        var customLayer = {
        id: '3d-model',
        type: 'custom',
@@ -172,7 +173,8 @@
 
        // use the three.js GLTF loader to add the 3D model to the three.js scene
        var loader = new THREE.GLTFLoader();
-       loader.load('https://docs.mapbox.com/mapbox-gl-js/assets/34M_17/34M_17.gltf', (function (gltf) {
+       loader.load("3DModels\AmericanCopperBuildingConceptModel.gltf", (function(gltf) {
+       //loader.load('https://docs.mapbox.com/mapbox-gl-js/assets/34M_17/34M_17.gltf', (function (gltf) {
        this.scene.add(gltf.scene);
        }).bind(this));
        this.map = map;
@@ -205,7 +207,7 @@
        this.map.triggerRepaint();
        }
        };
-       */
+       //*/
 
     </script>
 
